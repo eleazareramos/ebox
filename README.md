@@ -16,4 +16,8 @@ Stack:
 - Google API (Gmail)
 - Deployed with Now
 
+Lacks:
+- Improper styling techniques (inline)
+- Components have too many functions / methods
+
 #serverless
