@@ -1,0 +1,31 @@
+* {
+  font-family: 'Space Mono', monospace;
+  outline-style: none;
+}
+    
+body {
+  margin: 0px;
+  background-color: #cfd8dc;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+}
+
+.flex-row-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clickable-text:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
