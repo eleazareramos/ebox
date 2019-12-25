@@ -7,6 +7,7 @@ Inbox Zero requires that you move inbound emails to a central to-do list, and im
 ...and just because I like having a simple (and temporary) note pad while looking at my to-do list, I added a textarea to the page.
 
 Checkout the deployed app: https://ebox.now.sh
+(You need a Google Account)
 
 Stack:
 - NextJS
