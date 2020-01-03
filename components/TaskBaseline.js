@@ -237,12 +237,24 @@ const TaskBaseline = props => {
       })
     }
 
-    _threads.forEach(t => {
-      addTask(
-        `${t.subject}`,
-        `https://mail.google.com/mail/u/0/#inbox/${t.threadId}`
-      )
-    })
+    const threadTasks = _threads.map(t => ({
+      title: t.subject,
+      link: `https://mail.google.com/mail/u/0/#inbox/${t.threadId}`,
+    }))
+
+    let _tasks = []
+    for (let task of threadTasks){
+      const newTask = await props.firebase
+        .firestore()
+        .collection('tasks')
+        .add(task)
+      
+      const newTaskId = newTask.id
+      _tasks.push({...task, id: newTaskId})
+    }
+
+    setTasks([...tasks, ..._tasks])
+    
   }
 
   const moveFocusedTask = offset => {
