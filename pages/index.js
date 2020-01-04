@@ -45,7 +45,7 @@ const Base = () => {
       <Head>
         <script src="https://apis.google.com/js/api.js" />
         <link
-          href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap"
+          href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap"
           rel="stylesheet"
         />
       </Head>
