@@ -116,7 +116,6 @@ const TaskBaseline = props => {
   }
 
   const handleKeyDown = e => {
-    e.preventDefault()
     if (!hotKeysOn) return
     const len = tasks.length
     if (e.key === 'j' && !(e.ctrlKey || e.metaKey)) {
@@ -134,6 +133,7 @@ const TaskBaseline = props => {
       }
     }
     if (e.ctrlKey || e.metaKey) {
+      e.preventDefault()
       if (e.key === 'k') {
         moveFocusedTask(-1)
       }
@@ -154,7 +154,6 @@ const TaskBaseline = props => {
   }
 
   const handleKeyUp = e => {
-    e.preventDefault()
     if (!hotKeysOn) return
     if (e.key === 'n') {
       newTaskInputRef.current.focus()
